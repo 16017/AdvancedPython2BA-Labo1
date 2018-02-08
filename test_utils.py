@@ -4,29 +4,18 @@
 
 import unittest
 import utils
+from math import sqrt
 
 class TestUtils(unittest.TestCase):
-    def test_fact(n):
-        try :
-            while n>0:
-                fact = 1
-                fact*=n
-                n-=1
-        except :
-            pass
-        finally :
-            return fact
+    def test_fact(self):
+
         pass
+
     
-    def test_roots(a, b, c):
-        delta = b^2-4*a*c
-        if delta < 0:
-            roots=('/')
-        if delta >= 0:
-            roots=((-b+sqrt(delta))/2*a,(-b-sqrt(delta))/2*a)
-        return roots
-            
+    def test_roots(self):
+
         pass
+
     
     def test_integrate(self):
         # À compléter...
@@ -36,3 +25,4 @@ if __name__ == '__main__':
     suite = unittest.TestLoader().loadTestsFromTestCase(TestUtils)
     runner = unittest.TextTestRunner()
     exit(not runner.run(suite).wasSuccessful())
+
